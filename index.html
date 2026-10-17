@@ -15,9 +15,26 @@ a{display:inline-block;margin-top:8px;padding:11px 22px;border-radius:999px;back
 <body>
 <div class="c"><div class="r"></div><p>Redirecionando…</p><a id="a" href="#">Abrir agora</a></div>
 <script>
-// ✏️ PARA TROCAR O DESTINO, EDITE SÓ A LINHA ABAIXO:
-const DESTINO = "https://tiktok.com";
+// ✏️ PARA TROCAR O DESTINO DE UM CLIENTE, EDITE SÓ O ENDEREÇO DA LINHA DELE.
+// Mantenha as aspas e a vírgula no final de cada linha.
+const DESTINOS = {
+  "cliente01": "https://instagram.com",
+  "cliente02": "https://instagram.com",
+  "cliente03": "https://instagram.com",
+  "cliente04": "https://instagram.com",
+  "cliente05": "https://instagram.com",
+  "cliente06": "https://youtube.com",
+  "cliente07": "https://instagram.com",
+  "cliente08": "https://instagram.com",
+  "cliente09": "https://instagram.com",
+  "cliente10": "https://instagram.com",
+};
 
+// Se o código não existir, vai para este endereço:
+const PADRAO = "https://instagram.com";
+
+const c = new URLSearchParams(location.search).get("c");
+const DESTINO = DESTINOS[c] || PADRAO;
 document.getElementById("a").href = DESTINO;
 location.replace(DESTINO);
 </script>
