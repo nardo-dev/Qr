@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirecionando…</title>
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font:16px -apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;background:linear-gradient(135deg,#ede9fe,#c4b5fd);color:#2e1065;text-align:center}
+.c{background:rgba(255,255,255,.7);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:36px 28px;border-radius:26px;box-shadow:0 20px 50px -20px rgba(91,33,182,.5)}
+.r{width:40px;height:40px;margin:0 auto 16px;border-radius:50%;border:3.5px solid #ddd6fe;border-top-color:#7c3aed;animation:s .9s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+a{display:inline-block;margin-top:8px;padding:11px 22px;border-radius:999px;background:linear-gradient(180deg,#8b5cf6,#6d28d9);color:#fff;font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="c"><div class="r"></div><p>Redirecionando…</p><a id="a" href="#">Abrir agora</a></div>
+<script>
+// ✏️ PARA TROCAR O DESTINO, EDITE SÓ A LINHA ABAIXO:
+const DESTINO = "https://instagram.com";
+
+document.getElementById("a").href = DESTINO;
+location.replace(DESTINO);
+</script>
+</body>
+</html>
